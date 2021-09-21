@@ -9,7 +9,7 @@ const db = process.env.MONGODB_DB
 const mongoose = require('mongoose');
 
 //routes
-const routes = require('./routes/user')
+const userRoute = require('./routes/user')
 //connecting database
 mongoose.connect(`mongodb+srv://${user}:${pwd}@cluster0.xrml9.mongodb.net/${db}?retryWrites=true&w=majority`, 
     {
@@ -22,7 +22,7 @@ mongoose.connect(`mongodb+srv://${user}:${pwd}@cluster0.xrml9.mongodb.net/${db}?
 //middleware
 
 app.use(express.json());
-app.use('/api', routes)
+app.use('/api', userRoute)
 //requests
 
 
