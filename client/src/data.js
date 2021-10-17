@@ -1,7 +1,7 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://www.deshibazaar24.com/public/uploads/all/xN90I3TilTc89R0CzWZpeh2ParYk0VGriYaNLAlg.jpg",
+      img: "https://deshibazaar24.com/public/uploads/all/SzdRkJdsZPFWLMVvIR4HJXa3RTQ8LFbTkzT5wANY.jpg",
       title: "FESTIVE SALE",
       desc: "THIS FESTIVE SEASON GRAB YOUR STYLE! GET FREE DELIVERY AND GET FLAT 50% OFF FOR NEW ARRIVALS ",
       bg: "f5fafd",
