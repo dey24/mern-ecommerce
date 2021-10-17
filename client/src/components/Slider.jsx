@@ -89,16 +89,12 @@ const Slider = () => {
     }
   };
 
-  const sliderButtonStyle = styled.button`
-    font-size: 2em;
 
-`
-  
 
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
-        <ArrowLeftOutlined  slideButton ={sliderButtonStyle} />
+        <ArrowLeftOutlined />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
