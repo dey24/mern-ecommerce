@@ -16,7 +16,7 @@ const Container = styled.div`
 const Arrow = styled.div`
   width: 100px;
   height: 100px;
-  background-color: #fff7f7;
+  background-color: gray;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@ const Arrow = styled.div`
   right: ${(props) => props.direction === "right" && "20px"};
   margin: auto;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.7;
   z-index: 2;
 `;
 
@@ -89,10 +89,16 @@ const Slider = () => {
     }
   };
 
+  const sliderButtonStyle = styled.button`
+    font-size: 2em;
+
+`
+  
+
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
-        <ArrowLeftOutlined />
+        <ArrowLeftOutlined  slideButton ={sliderButtonStyle} />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
