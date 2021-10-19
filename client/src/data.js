@@ -1,7 +1,7 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://cdn.shopify.com/s/files/1/0259/6736/2107/products/red-raw-silk-saree-with-gold-cutwork-lace-bordersareehouse-of-blouse-25175011.jpg?v=1588823714",
+      img: "https://deshibazaar24.com/public/uploads/all/SzdRkJdsZPFWLMVvIR4HJXa3RTQ8LFbTkzT5wANY.jpg",
       title: "FESTIVE SALE",
       desc: "THIS FESTIVE SEASON GRAB YOUR STYLE! GET FREE DELIVERY AND GET FLAT 50% OFF FOR NEW ARRIVALS ",
       bg: "f5fafd",

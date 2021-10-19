@@ -14,9 +14,9 @@ const Container = styled.div`
 `;
 
 const Arrow = styled.div`
-  width: 100px;
-  height: 100px;
-  background-color: #fff7f7;
+  width: 75px;
+  height: 75px;
+  background-color: #b5b1a7;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@ const Arrow = styled.div`
   right: ${(props) => props.direction === "right" && "20px"};
   margin: auto;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: 2;
 `;
 
@@ -88,6 +88,8 @@ const Slider = () => {
       setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
   };
+
+
 
   return (
     <Container>
