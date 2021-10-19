@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
-  height: 60px;
+  height: 65px;
   ${mobile({ height: "50px" })}
 `;
 
@@ -60,7 +60,7 @@ const Right = styled.div`
 `;
 
 const MenuItem = styled.div`
-  font-size: 14px;
+  font-size: 17px;
   cursor: pointer;
   margin-left: 25px;
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
@@ -73,8 +73,8 @@ const Navbar = () => {
         <Left>
           <Language>ENGLISH</Language>
           <SearchContainer>
-            <Input placeholder="Search" />
-            <Search style={{ color: "gray", fontSize: 16 }} />
+            <Input placeholder="Search..." />
+            <Search style={{ color: "gray", fontSize: 20 }} />
           </SearchContainer>
         </Left>
         <Center>
