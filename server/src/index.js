@@ -10,6 +10,7 @@ const mongoose = require('mongoose');
 
 //routes
 const userRoute = require('./routes/user')
+const authRoute = require("./routes/auth")
 //connecting database
 mongoose.connect(`mongodb+srv://${user}:${pwd}@cluster0.xrml9.mongodb.net/${db}?retryWrites=true&w=majority`, 
     {
@@ -22,7 +23,8 @@ mongoose.connect(`mongodb+srv://${user}:${pwd}@cluster0.xrml9.mongodb.net/${db}?
 //middleware
 
 app.use(express.json());
-app.use('/api', userRoute)
+app.use('/api/users', userRoute);
+app.use('/api/auth', authRoute);
 //requests
 
 
