@@ -20,5 +20,18 @@ router.post("/register", async(req, res) => {
     
 })
 
+//Login
+
+router.post('/login', async (req, res) =>{
+    try {
+        const user = await User.findOne({username: req.body.username});
+
+        const hashPwd = CryptoJS.AES.decrypt(user.password, process.env.PASS_SEC);
+
+        const pwd = hashPwd.toString(CryptoJS.enc.Utf8);
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
 
 module.exports = router;
