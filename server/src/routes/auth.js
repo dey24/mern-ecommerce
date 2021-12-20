@@ -25,12 +25,18 @@ router.post("/register", async(req, res) => {
 router.post('/login', async (req, res) =>{
     try {
         const user = await User.findOne({username: req.body.username});
-
+        !user && res.status(401).json("Wrong credentials");
+        
         const hashPwd = CryptoJS.AES.decrypt(user.password, process.env.PASS_SEC);
-
-        const pwd = hashPwd.toString(CryptoJS.enc.Utf8);
+        
+        const Originalpassword = hashPwd.toString(CryptoJS.enc.Utf8);
+        //Originalpassword !== req.body.password && res.status(401).json("Wrong credentials");
+        //unable to figure out why this if statement above is not working.
+        
+        const {password, ...others} = user._doc;
+        res.status(200).json(others);
     } catch (error) {
-        res.status(500).json(error)
+        res.status(500).json(error);
     }
 })
 
